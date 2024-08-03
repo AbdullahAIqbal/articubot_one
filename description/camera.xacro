@@ -4,13 +4,14 @@
     <joint name="camera_joint" type="fixed">
         <parent link="chassis"/>
         <child link="camera_link"/>
-        <origin xyz="0.305 0 0.08" rpy="0 0 0"/>
+        <origin xyz="0.122495 0.122725 0.086129" rpy="0 0 0"/>
     </joint>
 
     <link name="camera_link">
         <visual>
+            <origin xyz="-0.122495 -0.122725 -0.086129" rpy="0 0 0"/>
             <geometry>
-                <box size="0.010 0.03 0.03"/>
+                <mesh filename="file://$(find ROS_rover_urdf_description)/meshes/Cam_1.stl" scale="0.001 0.001 0.001"/>
             </geometry>
             <material name="red"/>
         </visual>
